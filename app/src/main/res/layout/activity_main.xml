@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+	android:background="@color/resValueColorYxf"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,7 +14,7 @@
         android:text="0"
 	    app:layout_constraintBottom_toTopOf="@+id/edittext"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+	    app:layout_constraintRight_toLeftOf="@+id/brutal"
         app:layout_constraintTop_toTopOf="parent" />
 
 	<EditText
@@ -23,7 +24,7 @@
 		android:ems="10"
 		android:inputType="textMultiLine"
 	    app:layout_constraintBottom_toTopOf="@+id/addscore"
-        app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/brutal"
         app:layout_constraintStart_toStartOf="parent"
 	    app:layout_constraintTop_toBottomOf="@+id/score" />
     <Button
@@ -81,5 +82,29 @@
 	    app:layout_constraintStart_toEndOf="@+id/bluetooth3"
 	    app:layout_constraintTop_toBottomOf="@+id/addscore" />
 
+    <!--
+    <ImageView
+
+	    android:id="@+id/brutal"
+        android:scaleType="fitCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+	    app:layout_constraintBottom_toBottomOf="@+id/edittext"
+	    app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edittext"
+	    app:layout_constraintTop_toTopOf="parent" 
+	    android:src="@drawable/bg2" />
+    -->
+    <androidx.compose.ui.platform.ComposeView
+
+	    android:id="@+id/brutal"
+        android:scaleType="fitCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+	    app:layout_constraintBottom_toBottomOf="@+id/edittext"
+	    app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edittext"
+	    app:layout_constraintTop_toTopOf="parent" 
+	     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
