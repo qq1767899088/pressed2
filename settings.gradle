@@ -15,3 +15,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "My Application_"
 include ':app'
+include ':openCVLibrary343'
+include ':java'
+include ':opencv'
+project(':opencv').projectDir = new File(opencvsdk + '/sdk')

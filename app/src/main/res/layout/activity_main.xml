@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:background="@color/resValueColorYxf"
+	android:background="@color/resValueColorYxf2"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,24 +14,47 @@
         android:text="0"
 	    app:layout_constraintBottom_toTopOf="@+id/edittext"
         app:layout_constraintLeft_toLeftOf="parent"
-	    app:layout_constraintRight_toLeftOf="@+id/brutal"
-        app:layout_constraintTop_toTopOf="parent" />
+	    app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brutal" />
 
 	<EditText
 		android:id="@+id/edittext"
+	android:textColor="@color/resValueColorYxf"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:ems="10"
+        android:text="wtuih"
 		android:inputType="textMultiLine"
 	    app:layout_constraintBottom_toTopOf="@+id/addscore"
-		app:layout_constraintEnd_toStartOf="@+id/brutal"
+	    app:layout_constraintEnd_toStartOf="@+id/bounty"
         app:layout_constraintStart_toStartOf="parent"
 	    app:layout_constraintTop_toBottomOf="@+id/score" />
+	<EditText
+		android:id="@+id/bounty"
+	android:textColor="@color/resValueColorYxf"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:ems="3"
+        android:text="10"
+        android:hint="num"
+		android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="@+id/edittext"
+	    app:layout_constraintEnd_toStartOf="@+id/toggle"
+        app:layout_constraintStart_toEndOf="@+id/edittext"
+	    app:layout_constraintTop_toTopOf="@+id/edittext" />
+<CheckBox
+		android:id="@+id/toggle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/edittext"
+	    app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bounty"
+	    app:layout_constraintTop_toTopOf="@+id/edittext" />
     <Button
         android:id="@+id/addscore2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="mislead"
+        android:text="addscore2"
 	    app:layout_constraintBottom_toTopOf="@+id/bluetooth"
         app:layout_constraintEnd_toEndOf="parent"
 	    app:layout_constraintStart_toEndOf="@+id/addscore"
@@ -40,7 +63,7 @@
         android:id="@+id/addscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="experience +1"
+        android:text="addscore"
 	    app:layout_constraintBottom_toTopOf="@+id/bluetooth"
 	    app:layout_constraintEnd_toStartOf="@+id/addscore2"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,15 +118,17 @@
 	    app:layout_constraintTop_toTopOf="parent" 
 	    android:src="@drawable/bg2" />
     -->
-    <androidx.compose.ui.platform.ComposeView
 
+    <androidx.compose.ui.platform.ComposeView
+android:textIsSelectable="true"
 	    android:id="@+id/brutal"
         android:scaleType="fitCenter"
         android:layout_width="0dp"
         android:layout_height="0dp"
-	    app:layout_constraintBottom_toBottomOf="@+id/edittext"
+	android:textColor="@color/resValueColorYxf"
+	    app:layout_constraintBottom_toTopOf="@+id/score"
 	    app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edittext"
+        app:layout_constraintStart_toStartOf="parent"
 	    app:layout_constraintTop_toTopOf="parent" 
 	     />
 

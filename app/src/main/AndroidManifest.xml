@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication_">
 
+<uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-feature android:name="android.hardware.camera"/>
+<uses-feature android:name="android.hardware.camera.autofocus"/>
+<uses-feature android:name="android.hardware.camera.front"/>
+<uses-feature android:name="android.hardware.camera.front.autofocus"/>
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -68,11 +76,17 @@
         </receiver>
 
         <service
+android:foregroundServiceType="mediaProjection"
             android:name=".MyService"
             android:exported="true" />
 
+<activity
+            android:name=".myScreenshot"
+            android:theme="@style/transparentTheme" />
         <activity
             android:name=".MainActivity"
+            android:theme="@style/Theme.MyApplication_"
+android:launchMode="singleTask"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

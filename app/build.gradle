@@ -4,6 +4,18 @@ id 'org.jetbrains.kotlin.android'
 }
 
 android {
+splits {
+    abi {
+        enable true
+        reset()
+        include "armeabi-v7a",'arm64-v8a'
+        universalApk false
+    }
+}
+aaptOptions{
+noCompress "tflite"
+noCompress "lite"
+}
     compileSdk 33
 
     defaultConfig {
@@ -16,7 +28,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags ''
+cppFlags "-frtti -fexceptions"
+abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+arguments "-DOpenCV_DIR=" + opencvsdk + "/sdk/native"
             }
         }
         vectorDrawables {
@@ -80,11 +94,27 @@ implementation 'com.github.mukeshsolanki:MarkdownView-Android:2.0.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 implementation "io.noties.markwon:core:$markwon_version"
+implementation "io.noties.markwon:ext-latex:$markwon_version"
+implementation "io.noties.markwon:inline-parser:$markwon_version"
+implementation "io.noties.markwon:html:$markwon_version"
 implementation 'com.github.jeziellago:compose-markdown:0.3.1'
 //    implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.core:core-ktx:1.7.15'
 //implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 implementation("io.coil-kt:coil:2.2.2")
 implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
+implementation 'org.tensorflow:tensorflow-lite:+'
+implementation project(path: ':opencv')
+implementation 'com.google.android.gms:play-services-tflite-java:16.0.1'
+    // Optional: include Tensorflow Lite Support Library
+    implementation 'com.google.android.gms:play-services-tflite-support:16.0.1'
+implementation 'com.google.android.gms:play-services-tasks:18.0.2'
+implementation 'org.tensorflow:tensorflow-lite-support:+'
+implementation 'com.google.android.gms:play-services-base:18.1.0'
+    // To use Standard variant:
+    //implementation 'cz.adaptech.tesseract4android:tesseract4android:4.5.0'
+
+    // To use OpenMP variant:
+//    implementation 'cz.adaptech.tesseract4android:tesseract4android-openmp:4.5.0'
 }
 
