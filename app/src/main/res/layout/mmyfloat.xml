@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <Button
+android:alpha="0.75"
+android:background="@android:color/transparent"
+        android:id="@+id/locationHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q"
+        app:layout_constraintBottom_toBottomOf="parent"
+	    app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+	    app:layout_constraintTop_toBottomOf="@+id/addscore" />
+<!--
+		android:ems="10"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+	android:background="@color/resValueColorYxf"
+    tools:context=".MainActivity"
+
+
+    <TextView
+android:alpha="0.5"
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="T[][]"
+	    app:layout_constraintBottom_toTopOf="@+id/edittext"
+	    app:layout_constraintEnd_toStartOf="@+id/addscore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+	<EditText
+		android:id="@+id/edittext"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:inputType="textMultiLine"
+		android:ems="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+	    app:layout_constraintEnd_toStartOf="@+id/bluetooth"
+        app:layout_constraintStart_toStartOf="parent"
+	    app:layout_constraintTop_toBottomOf="@+id/score" />
+    <Button
+android:alpha="0.5"
+        android:id="@+id/addscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="throw"
+	    app:layout_constraintBottom_toTopOf="@+id/bluetooth"
+	    app:layout_constraintEnd_toStartOf="@+id/addscore2"
+        app:layout_constraintStart_toEndOf="@+id/score"
+	    app:layout_constraintTop_toTopOf="parent" />
+    <Button
+android:alpha="0.5"
+        android:id="@+id/addscore2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="able"
+	    app:layout_constraintBottom_toTopOf="@+id/bluetooth"
+        app:layout_constraintEnd_toEndOf="parent"
+	    app:layout_constraintStart_toEndOf="@+id/addscore"
+	    app:layout_constraintTop_toTopOf="parent" />
+    <Button
+android:alpha="0.5"
+        android:id="@+id/bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toa"
+        app:layout_constraintBottom_toBottomOf="parent"
+	    app:layout_constraintEnd_toStartOf="@+id/bluetooth2"
+        app:layout_constraintStart_toStartOf="@+id/addscore"
+	    app:layout_constraintTop_toBottomOf="@+id/addscore" />
+    <Button
+android:alpha="0.5"
+        android:id="@+id/bluetooth2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="st"
+        app:layout_constraintBottom_toBottomOf="parent"
+	    app:layout_constraintStart_toEndOf="@+id/bluetooth"
+	    app:layout_constraintEnd_toEndOf="parent"
+	    app:layout_constraintTop_toBottomOf="@+id/addscore" />
+-->
+<!--
+    <Button
+        android:id="@+id/bluetooth3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bluetooth3"
+        app:layout_constraintBottom_toBottomOf="parent"
+	    app:layout_constraintStart_toEndOf="@+id/bluetooth2"
+	    app:layout_constraintEnd_toStartOf="@+id/bluetooth4"
+	    app:layout_constraintTop_toBottomOf="@+id/addscore" />
+    <Button
+        android:id="@+id/bluetooth4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bluetooth4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+	    app:layout_constraintStart_toEndOf="@+id/bluetooth3"
+	    app:layout_constraintTop_toBottomOf="@+id/addscore" />
+
+    <ImageView
+
+	    android:id="@+id/brutal"
+        android:scaleType="fitCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+	    app:layout_constraintBottom_toBottomOf="@+id/edittext"
+	    app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edittext"
+	    app:layout_constraintTop_toTopOf="parent" 
+	    android:src="@drawable/bg2" />
+-->
+    <!--
+    <androidx.compose.ui.platform.ComposeView
+
+	    android:id="@+id/brutal"
+        android:scaleType="fitCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+	    app:layout_constraintBottom_toBottomOf="@+id/edittext"
+	    app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edittext"
+	    app:layout_constraintTop_toTopOf="parent" 
+	     />
+    -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
