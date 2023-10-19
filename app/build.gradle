@@ -84,6 +84,7 @@ def core_version = "1.6.0"
 final def markwon_version = '4.6.2'
 dependencies {
 
+    implementation project(path: ':2myOpencv')
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
@@ -104,8 +105,7 @@ implementation 'com.github.jeziellago:compose-markdown:0.3.1'
 implementation("io.coil-kt:coil:2.2.2")
 implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
 implementation 'org.tensorflow:tensorflow-lite:+'
-implementation project(path: ':opencv')
-implementation 'com.google.android.gms:play-services-tflite-java:16.0.1'
+    implementation 'com.google.android.gms:play-services-tflite-java:16.0.1'
     // Optional: include Tensorflow Lite Support Library
     implementation 'com.google.android.gms:play-services-tflite-support:16.0.1'
 implementation 'com.google.android.gms:play-services-tasks:18.0.2'

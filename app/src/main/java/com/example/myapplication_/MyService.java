@@ -1966,11 +1966,16 @@ try{
 Interpreter.Options options = new Interpreter.Options();
     options.setNumThreads(4);
 interpreter = new Interpreter(loadModelFile(),options);
+Log.d("20231019","2null interpreter");
+if(interpreter == null){
+Log.d("20231019","null interpreter");
+}
 MyService.sc = new Socket(ip3,22223);
 //MyService.sc = new Socket(ip2,40081);
        mConnectedThread3 = new ConnectedThread2(MyService.sc);
        mConnectedThread3.start();
 }catch(Exception e){
+Log.d("20231019",e.getMessage());
 }
 
 }
@@ -2280,6 +2285,7 @@ data0 = null;
 StringWriter errors = new StringWriter();
 e.printStackTrace(new PrintWriter(errors));
 //return errors.toString();
+Log.e("20231019",e.getMessage());
           Toast.makeText(MyService.myctx,
                               errors.toString()+":e:"+ e.getMessage(),
                                Toast.LENGTH_LONG)
